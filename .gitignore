@@ -1,0 +1,19 @@
+# Secrets and local configuration: never commit these.
+.env*
+!.env.example
+
+# Vercel and build output
+.vercel/
+.output/
+dist/
+
+# Dependencies
+node_modules/
+
+# Token files (never commit, even encrypted)
+*.enc
+
+# Logs and OS/editor clutter
+*.log
+.DS_Store
+Thumbs.db

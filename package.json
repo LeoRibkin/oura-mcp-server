@@ -1,0 +1,30 @@
+{
+  "name": "oura-mcp-server",
+  "version": "1.0.0",
+  "description": "Self-hosted, read-only Oura Ring connector (remote MCP server) for Claude, deployable to Vercel.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@vercel/blob": "2.8.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.13.0",
+    "globals": "17.13.0"
+  },
+  "overrides": {
+    "@vercel/cli-config": {
+      "zod": "4.6.7"
+    }
+  }
+}

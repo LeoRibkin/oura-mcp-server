@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Wait 7 days before proposing a newly published version, so a hijacked
+    # release has time to be noticed and pulled before it reaches this repo.
+    # (Security fixes are not delayed.)
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
+    groups:
+      dev-dependencies:
+        dependency-type: development
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
